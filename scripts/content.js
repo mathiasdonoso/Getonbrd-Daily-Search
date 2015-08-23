@@ -11,31 +11,26 @@ function init() {
 
             var date = $(data).find('.cell.date')[index].textContent;
             var dateFormatted = date.substring(1, date.length-1)
-
             var title = $(this)[0].title;
             var url = $(this)[0].href;
+            var image = $(data).find('.job_logo')[index].outerHTML;
+            var imageFormatted = image.substring(image.indexOf('(') + 1, image.indexOf(')'));
 
             var job = {
                 'title': title,
                 'url': url,
-                'date': dateFormatted
+                'date': dateFormatted,
+                'image': imageFormatted
+            };
+
+            if (dateFormatted == 'ago 20') {
+                jobs.push(job);
+                $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="' + imageFormatted +'" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
             };
         
-            jobs.push(job);
         });
 
         console.log(jobs);
-
-        var jobsLength = jobs.length;
-
-        for (var i = 0; i < jobsLength; i++) {
-            console.log(jobs[i].date);
-            if (jobs[i].date == 'jul 30') {
-                console.log('si');
-            } else {
-                console.log('no');
-            };
-        };
     });
 };
 

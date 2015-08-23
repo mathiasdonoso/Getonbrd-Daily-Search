@@ -9,17 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
             var dateFormatted = date.substring(1, date.length-1)
             var title = $(this)[0].title;
             var url = $(this)[0].href;
+            var image = $(data).find('.job_logo')[index].outerHTML;
+            var imageFormatted = image.substring(image.indexOf('(') + 1, image.indexOf(')'));
 
             var job = {
                 'title': title,
                 'url': url,
-                'date': dateFormatted
+                'date': dateFormatted,
+                'image': image
             };
 
-
-
-            if (dateFormatted == 'jul 30') {
-                $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="./images/getonboard.png" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
+            if (dateFormatted == 'ago 20') {
+                // jobs.push(job);
+                $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="' + imageFormatted +'" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
             };
         
             // jobs.push(job);
