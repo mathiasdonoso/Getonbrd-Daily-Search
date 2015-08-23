@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             if (dateFormatted == 'jul 30') {
-                $("#job-list").append('<li><a href="' + url + '"><span class="tab">' + title + '</span></a></li>');
+                $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="./images/getonboard.png" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
             };
         
             // jobs.push(job);
