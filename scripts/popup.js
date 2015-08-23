@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     $.get('https://www.getonbrd.cl').success(function(data) {
+        
         var jobs = [];
 
         $(data).find('ul.job-list li a').each(function(index, value) {
@@ -21,8 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'image': image
             };
 
-            //if (dateFormatted == getDate()) {
-            if (dateFormatted == 'ago 20') {
+            if (dateFormatted == getDate()) {
                 jobs.push(job);
                 $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="' + imageFormatted +'" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
             };
@@ -32,10 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $("#job-list").append('<li>No hay nuevos empleos el día de hoy.</li>');
         };
     });
-
-
 });
-
 
 function getDate() {
     var date = new Date();
