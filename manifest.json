@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getonbrd Daily Search",
+  "description": "This extension shows the newest offer jobs in getonbrd.cl",
+  "version": "0.1",
+  "author": [
+    "Nidia Bustos",
+    "Mathías Donoso"
+  ],
+  "browser_action": {
+    "default_icon": "images/getonboard.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/vendor/jquery.min.js",
+        "scripts/content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ajax.googleapis.com/"
+  ]
+}
