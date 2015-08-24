@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+
     $.get('https://www.getonbrd.cl').success(function(data) {
         
         var jobs = [];
 
-        $('#loader').hide();
+        $('.loader').hide();
 
         $(data).find('ul.job-list a').each(function(index, value) {
 
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (dateFormatted == getDate()) {
                 jobs.push(job);
                 $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="' + imageFormatted +'" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
+
             };
         });
 
