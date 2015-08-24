@@ -36,6 +36,12 @@ ul {
 	font-weight: bold;
 }
 
+.noJob {
+  background: #f2f2f2;
+  color: black;
+  text-align: center;
+}
+
 .title {
 	width: 87%;
 	float: right;
