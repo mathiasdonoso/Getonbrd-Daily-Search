@@ -19,7 +19,8 @@
         "<all_urls>"
       ],
       "js": [
-        "scripts/vendor/jquery.min.js"
+        "scripts/vendor/jquery.min.js",
+        "scripts/libs/dates.min.js"
       ]
     }
   ],
