@@ -1,4 +1,4 @@
-## Extensión de Getonbrd
+## Info
 
 A simple Google Chrome extension to see the job offers of today in [Getonboard](https://www.getonbrd.cl).
 
