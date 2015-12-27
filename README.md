@@ -1,8 +1,10 @@
-## Info
+# Getonboard Extension
+
+## Description
 
 A simple Google Chrome extension to see the job offers of today in [Getonboard](https://www.getonbrd.cl).
 
-### Instalation
+### Installation
 
 * Download or clone the project.
 * Go to [Chrome extensions](chrome://extensions/).
