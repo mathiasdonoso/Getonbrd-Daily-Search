@@ -1,4 +1,12 @@
 ## Extensión de Getonbrd
 
-Extensión de Google Chrome para poder ver las últimas ofertas de trabajo del día publicadas en [Getonboard](https://www.getonbrd.cl).
+A simple Google Chrome extension to see the job offers of today in [Getonboard](https://www.getonbrd.cl).
+
+### Instalation
+
+* Download or clone the project.
+* Go to [Chrome extensions](chrome://extensions/).
+* Click on "Developer mode".
+* Click on "Load unpacked extension..." and select the main folder of the project.
+* You are done.
 
