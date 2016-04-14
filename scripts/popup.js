@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var jobs = [];
         $('.loader').hide();
 
-        $(data).find('ul.job-list a').each(function(index, value) { 
+        $(data).find('.job-list a').each(function(index, value) { 
             
             var date            = $(this).children('.cell.date').text();
             var dateFormatted   = date.substring(1, date.length-1);
