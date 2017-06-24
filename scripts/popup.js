@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    $.get('https://www.getonbrd.cl').success(function(data) {
-                
+    var page = 'https://www.getonbrd.cl'
+
+    $.get(page).success(function(data) {
         var jobs = [];
         $('.loader').hide();
 
-        $(data).find('.job-list a').each(function(index, value) { 
-            
-            var date            = $(this).children('.cell.date').text();
-            var dateFormatted   = date.substring(1, date.length-1);
-            var title           = $(this)[0].title;
-            var url             = $(this)[0].href;
-            var image           = $(this).children().context.innerHTML;
+        $(data).find('.job-list a').each(function(index, value) {
+            var $self           = $(this);
+            var date            = $self.children('.cell.date').text();
+            var dateFormatted   = date.substring(1, date.length - 1);
+            var title           = $self.children('.job_desc').children('h4').text();
+            var url             = $self[0].href;
+            var image           = $self.children().context.innerHTML;
             var imageFormatted  = image.substring(image.indexOf('(') + 1, image.indexOf(')'));
 
             var job = {
