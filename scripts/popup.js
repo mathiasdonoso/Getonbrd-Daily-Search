@@ -11,20 +11,28 @@ document.addEventListener('DOMContentLoaded', function() {
             var date            = $self.children('.cell.date').text();
             var dateFormatted   = date.substring(1, date.length - 1);
             var title           = $self.children('.job_desc').children('h4').text();
-            var url             = $self[0].href;
+            var url             = page + $self[0].href;
+            var urlFormatted    = url.replace('chrome-extension://' + $self[0].host, '');
             var image           = $self.children().context.innerHTML;
             var imageFormatted  = image.substring(image.indexOf('(') + 1, image.indexOf(')'));
 
             var job = {
                 'title': title,
-                'url': url,
+                'url': urlFormatted,
                 'date': dateFormatted,
                 'image': image
             };
 
             if (dateFormatted == getDate()) {
                 jobs.push(job);
-                $("#job-list").append('<li> <a href="' + url + '" target="_blank"><img src="' + imageFormatted +'" alt="' + title + '" /> <div class="title">' + title + '</div> </a></li>');
+                $("#job-list").append('\
+                  <a href="' + urlFormatted + '" target="_blank">\
+                    <li>\
+                      <img src="' + imageFormatted +'" alt="' + title + '" />\
+                      <div class="title">' + title + '</div>\
+                    </li>\
+                  </a>'
+                );
             };
         });
 
