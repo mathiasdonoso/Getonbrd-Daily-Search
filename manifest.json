@@ -2,14 +2,14 @@
   "manifest_version": 2,
 
   "name": "Getonbrd Daily Search",
-  "description": "This extension shows the newest offer jobs in getonbrd.cl",
-  "version": "0.2",
+  "description": "Esta extensión muestra las ofertas de trabajo de programador del día en getonbrd.cl",
+  "version": "0.3",
   "author": [
     "Nidia Bustos",
     "Mathías Donoso"
   ],
   "browser_action": {
-    "default_icon": "images/getonboard.png",
+    "default_icon": "assets/images/getonboard.png",
     "default_popup": "popup.html",
     "default_title": "Newest jobs!"
   },
@@ -19,14 +19,11 @@
         "<all_urls>"
       ],
       "js": [
-        "scripts/vendor/jquery.min.js",
-        "scripts/libs/dates.min.js"
+        "src/popup.js"
       ]
     }
   ],
   "permissions": [
-    "activeTab",
-    "tabs",
-    "https://ajax.googleapis.com/"
+    "activeTab"
   ]
 }
